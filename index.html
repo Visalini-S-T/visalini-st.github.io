@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Visalini S T | Software Engineer Intern</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f8fa;--surface:#ffffff;--ink:#0f1b2d;--muted:#55627a;--line:#e1e6ee;--accent:#1d4ed8;--accent-soft:#e8eefc;--accent-ink:#ffffff;
+--head:"Manrope","Segoe UI",Arial,sans-serif;--body:"Inter","Segoe UI",Arial,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c1423;--surface:#131d31;--ink:#e9eef8;--muted:#9fadc7;--line:#25324d;--accent:#7aa2ff;--accent-soft:#1a2a4f;--accent-ink:#0c1423;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0c1423;--surface:#131d31;--ink:#e9eef8;--muted:#9fadc7;--line:#25324d;--accent:#7aa2ff;--accent-soft:#1a2a4f;--accent-ink:#0c1423;color-scheme:dark}
+html{scroll-padding-top:5rem;scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.7 var(--body);-webkit-font-text-size-adjust:100%}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:20}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 1.5rem}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:21;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-top:.9rem;padding-bottom:.9rem}
+.nav strong{font:800 1rem var(--head);letter-spacing:-.01em}
+.nav nav{display:flex;gap:1.5rem;flex-wrap:wrap;font-size:.92rem;font-weight:500}
+.nav nav a{text-decoration:none;color:var(--muted)}
+.nav nav a:hover{color:var(--ink)}
+h1,h2,h3{font-family:var(--head);margin:0;letter-spacing:-.02em}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:3rem;align-items:center;padding:5rem 0 4.5rem}
+.hero h1{font-size:clamp(2.6rem,7vw,4.2rem);font-weight:800;line-height:1.05}
+.role{font:600 1.25rem var(--head);color:var(--accent);margin:.9rem 0 1.3rem}
+.hero p{max-width:34rem;margin:0 0 1.8rem;color:var(--muted);font-size:1.075rem}
+.btns{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.7rem 1.3rem;border-radius:8px;border:1px solid var(--line);background:var(--surface);font-weight:600;font-size:.95rem;text-decoration:none}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.primary:hover{filter:brightness(1.08)}
+.glance{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.6rem;display:grid;gap:1.15rem}
+.glance div{display:grid;gap:.1rem}
+.glance dt{font-size:.85rem;color:var(--muted)}
+.glance dd{margin:0;font-weight:600}
+.glance .avail{display:inline-flex;align-items:center;gap:.5rem;color:var(--accent);font-weight:600}
+.avail i{width:9px;height:9px;border-radius:50%;background:#16a34a;display:inline-block}
+section{padding:4.2rem 0;border-top:1px solid var(--line)}
+h2{font-size:1.75rem;font-weight:800;margin-bottom:2rem}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+.about p{margin:0 0 1rem;color:var(--muted);max-width:34rem}
+.about p:first-child{color:var(--ink)}
+.proj{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:1.8rem 2rem;margin-bottom:1.5rem}
+.proj header{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:baseline;margin-bottom:.5rem}
+.proj h3{font-size:1.3rem;font-weight:700}
+.stat{font-size:.82rem;font-weight:600;color:var(--accent);background:var(--accent-soft);padding:.2rem .7rem;border-radius:999px}
+.proj .lead{margin:0 0 1rem;color:var(--muted)}
+.proj ul.pts{margin:0 0 1.3rem;padding-left:1.2rem;max-width:46rem}
+.proj .pts li{margin-bottom:.5rem}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;margin:0;padding:0}
+.tags li{font-size:.85rem;font-weight:500;padding:.2rem .7rem;border-radius:6px;background:var(--accent-soft);color:var(--accent)}
+.skills{display:grid;gap:0;border:1px solid var(--line);border-radius:12px;background:var(--surface);overflow:hidden}
+.skills div{display:grid;grid-template-columns:12rem 1fr;gap:1rem;padding:1.1rem 1.6rem;align-items:center}
+.skills div+div{border-top:1px solid var(--line)}
+.skills h3{font-size:.98rem;font-weight:700}
+.time{display:grid;gap:0;border-left:2px solid var(--line);margin-left:.4rem}
+.row{position:relative;display:grid;grid-template-columns:10.5rem 1fr;gap:1.2rem;padding:0 0 1.8rem 1.8rem}
+.row::before{content:"";position:absolute;left:-7px;top:.5rem;width:12px;height:12px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+.row time{font-size:.9rem;color:var(--muted);padding-top:.1rem}
+.row h3{font-size:1.08rem;font-weight:700;margin-bottom:.15rem}
+.row p{margin:0;color:var(--muted);max-width:40rem}
+.contact{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:2.6rem;display:flex;justify-content:space-between;gap:2rem;align-items:center;flex-wrap:wrap}
+.contact h2{margin-bottom:.5rem}
+.contact p{margin:0;color:var(--muted);max-width:28rem}
+footer{padding:1.5rem 0 3rem;color:var(--muted);font-size:.88rem;border-top:1px solid var(--line)}
+@media (max-width:780px){.hero,.about{grid-template-columns:1fr}.hero{padding:3rem 0}.skills div{grid-template-columns:1fr;gap:.5rem}.row{grid-template-columns:1fr;gap:.2rem}.nav nav{gap:1rem}.proj{padding:1.4rem}.contact{padding:1.6rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap"><strong>Visalini S T</strong>
+<nav aria-label="Sections"><a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a></nav></div></header>
+
+<main>
+<div class="wrap hero">
+<div>
+<h1>Visalini S T</h1>
+<div class="role">Software Engineer Intern</div>
+<p>Computer Science student building full-stack web applications and real-time tools. Currently working on a live college bus tracker and a peer mock interview platform.</p>
+<div class="btns"><a class="btn primary" href="#projects">View projects</a><a class="btn" href="mailto:visalinisureshkumar@gmail.com">Email me</a><a class="btn" href="https://www.linkedin.com/in/visalini-s-t-08199b312/" target="_blank" rel="noopener">LinkedIn</a></div>
+</div>
+<dl class="glance" style="margin:0">
+<div><dt>Status</dt><dd class="avail"><i></i>Open to internships</dd></div>
+<div><dt>Education</dt><dd>B.E. Computer Science, KPR Institute of Engineering and Technology</dd></div>
+<div><dt>Location</dt><dd>Coimbatore, India</dd></div>
+<div><dt>Core stack</dt><dd>JavaScript, React, Node.js, MongoDB, PostgreSQL</dd></div>
+</dl>
+</div>
+
+<section id="about"><div class="wrap">
+<h2>About</h2>
+<div class="about">
+<p>I’m a detail-oriented Computer Science student with a strong foundation in programming, full-stack web development, database management and problem solving. I enjoy taking an application from the user interface through the API to the database behind it.</p>
+<p>I want to build scalable, user-friendly software. I’m looking for an internship where I can contribute to an engineering team and keep growing my technical skills.</p>
+</div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+<h2>Projects</h2>
+
+<article class="proj">
+<header><h3>Bus Tracking System for College Transport</h3><span class="stat">In progress</span></header>
+<p class="lead">A real-time tracking system so students can see where their college bus is.</p>
+<ul class="pts">
+<li>Separate driver and student mobile apps. The driver’s phone streams live bus locations.</li>
+<li>Designing a Firebase backend for live location sync, ETA calculation, and push notifications for delays and bus arrival.</li>
+<li>Planning a pilot on a college bus route to measure update delay and ETA accuracy.</li>
+</ul>
+<ul class="tags"><li>Flutter</li><li>Firebase</li><li>Google Maps API</li></ul>
+</article>
+
+<article class="proj">
+<header><h3>MockMate: Peer Mock Interview Web Application</h3><span class="stat">In progress</span></header>
+<p class="lead">A full-stack platform where students run peer mock coding interviews as interviewer and candidate.</p>
+<ul class="pts">
+<li>Shared interview rooms with a real-time collaborative code editor (Monaco) and live chat using Socket.io.</li>
+<li>Integrating the Judge0 API to run code in multiple languages and show the output to both users.</li>
+<li>JWT authentication with role-based access, a MySQL schema, and interviewer scorecards with saved feedback reports.</li>
+</ul>
+<ul class="tags"><li>JavaScript</li><li>Node.js</li><li>Express</li><li>Socket.io</li><li>MySQL</li><li>JWT</li></ul>
+</article>
+</div></section>
+
+<section id="skills"><div class="wrap">
+<h2>Skills</h2>
+<div class="skills">
+<div><h3>Languages</h3><ul class="tags"><li>JavaScript</li><li>Java</li><li>C</li></ul></div>
+<div><h3>Frontend</h3><ul class="tags"><li>React</li><li>HTML</li><li>CSS</li></ul></div>
+<div><h3>Backend and databases</h3><ul class="tags"><li>Node.js</li><li>MongoDB</li><li>PostgreSQL</li></ul></div>
+<div><h3>Tools</h3><ul class="tags"><li>Git</li><li>GitHub</li></ul></div>
+</div>
+</div></section>
+
+<section id="education"><div class="wrap">
+<h2>Education and certifications</h2>
+<div class="time">
+<div class="row"><time>Sep 2024 to May 2028</time><div><h3>B.E. Computer Science</h3><p>KPR Institute of Engineering and Technology, Coimbatore. CGPA 7.7</p></div></div>
+<div class="row"><time>Apr 2026</time><div><h3>AWS AI Practitioner Challenge</h3><p>Udacity. Foundational AI, machine learning and generative AI concepts, plus AWS services.</p></div></div>
+<div class="row"><time>Oct 2025</time><div><h3>MongoDB Schema Design courses</h3><p>MongoDB University. Four courses covering relational to document model migration, schema design patterns and antipatterns, and schema optimization.</p></div></div>
+<div class="row"><time>May 2024</time><div><h3>Class 12, CBSE</h3><p>Senthil Public School, Salem. 71.6%</p></div></div>
+<div class="row"><time>July 2022</time><div><h3>Class 10, CBSE</h3><p>Senthil Public School, Salem. 88.4%</p></div></div>
+</div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+<div class="contact">
+<div><h2>Get in touch</h2><p>I’m open to software engineering internships. Email is the quickest way to reach me.</p></div>
+<div class="btns"><a class="btn primary" href="mailto:visalinisureshkumar@gmail.com">visalinisureshkumar@gmail.com</a><a class="btn" href="tel:+917358949532">+91 73589 49532</a></div>
+</div>
+</div></section>
+</main>
+<footer><div class="wrap">Visalini S T, Coimbatore, India</div></footer>
+</body>
+</html>
